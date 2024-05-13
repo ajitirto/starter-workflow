@@ -53,7 +53,7 @@ jobs:
         with:
           context: ./
           file: ./Dockerfile
-          push: true
+          # push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/nodejs-demo:latest
       
       - name: Log in to Docker Hub
