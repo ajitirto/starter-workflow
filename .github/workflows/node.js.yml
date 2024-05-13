@@ -62,14 +62,4 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-      - name: Run the image in a container
-        uses: addnab/docker-run-action@v3
-        with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
-          image: ${{ secrets.DOCKERHUB_USERNAME }}/nodejs-demo:latest
-          run: |
-            echo "runing the docker image"
-            echo "Testing the nodejs  app endpoints"
-            echo ${{ steps.docker_build.outputs.digest }}
 
