@@ -1,3 +1,13 @@
 tasks:
-  - init: npm install
-    command: npm run dev
+    - name: Terminal 1
+      before: echo "requirement install"
+      init: npm install
+      command: npm run dev
+
+    - name: Terminal 2
+      before: echo "hi, terminal 2"
+ports:
+  - port: 3000
+    onOpen: open-browser
+    visibility: public
+    
