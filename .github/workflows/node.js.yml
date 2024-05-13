@@ -67,7 +67,6 @@ jobs:
         with:
           image: ${{ secrets.DOCKERHUB_USERNAME }}/nodejs-demo:latest
           run: |
-            echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
             echo "runing the docker image"
             echo "Testing the nodejs  app endpoints"
             echo ${{ steps.docker_build.outputs.digest }}
